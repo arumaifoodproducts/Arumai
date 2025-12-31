@@ -64,4 +64,4 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
     );
 };
 
-export default ProductCard;
+
