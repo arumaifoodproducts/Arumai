@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -12,8 +13,16 @@ const Navbar = () => {
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="text-2xl font-serif font-bold text-primary-dark">
-                            Arumai<span className="text-secondary">.</span>
+                        <Link href="/">
+                            <div className="relative h-12 w-40">
+                                <Image
+                                    src="/logo.png"
+                                    alt="Arumai Foods"
+                                    fill
+                                    className="object-contain object-left"
+                                    priority
+                                />
+                            </div>
                         </Link>
                     </div>
 
