@@ -87,12 +87,12 @@ export default function Home() {
       </section>
 
       {/* Category Icons Strip */}
-      <section className="py-12 bg-white shadow-sm sticky top-[70px] z-40 md:static md:z-0">
+      <section className="py-4 md:py-12 bg-white shadow-sm sticky top-[70px] z-40 md:static md:z-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-auto no-scrollbar">
-          <div className="flex justify-between md:justify-center gap-8 min-w-max px-2">
+          <div className="flex justify-between md:justify-center gap-4 md:gap-8 min-w-max px-2">
             {categories.map((cat, idx) => (
-              <Link key={idx} href={`/shop?category=${cat.name}`} className="group flex flex-col items-center gap-3 cursor-pointer">
-                <div className="w-20 h-20 rounded-full bg-cream-light border-2 border-transparent group-hover:border-primary flex items-center justify-center text-4xl shadow-sm group-hover:shadow-md transition-all">
+              <Link key={idx} href={`/shop?category=${cat.name}`} className="group flex flex-col items-center gap-2 cursor-pointer">
+                <div className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-cream-light border-2 border-transparent group-hover:border-primary flex items-center justify-center text-2xl md:text-4xl shadow-sm group-hover:shadow-md transition-all">
                   {cat.icon}
                 </div>
                 <span className="font-bold text-primary-dark group-hover:text-secondary uppercase text-xs tracking-wider transition-colors">{cat.name}</span>
