@@ -10,6 +10,17 @@ export default function ProductDetails({ product }: { product: Product }) {
     const { addToCart } = useCart();
     const [selectedWeight, setSelectedWeight] = useState('500g'); // Mock weight for now
 
+    const currentPrice = selectedWeight === '1kg' ? product.price * 2 : product.price;
+    const currentMRP = Math.round(currentPrice * 1.2);
+
+    const handleAddToCart = () => {
+        addToCart({
+            ...product,
+            price: currentPrice,
+            name: `${product.name} (${selectedWeight})`
+        });
+    };
+
     return (
         <div className="min-h-screen bg-white">
             {/* Breadcrumb */}
@@ -82,8 +93,8 @@ export default function ProductDetails({ product }: { product: Product }) {
 
                         {/* Price */}
                         <div className="flex items-baseline gap-3 mb-1">
-                            <span className="text-3xl font-bold text-gray-900">₹{product.price}</span>
-                            <span className="text-gray-400 text-sm line-through">MRP ₹{Math.round(product.price * 1.2)}</span>
+                            <span className="text-3xl font-bold text-gray-900">₹{currentPrice}</span>
+                            <span className="text-gray-400 text-sm line-through">MRP ₹{currentMRP}</span>
                             <span className="text-green-700 text-xs font-bold">(Incl. of all taxes)</span>
                         </div>
                         <div className="bg-[#E6F3F5] text-primary-dark text-xs p-2 rounded mb-6 inline-block self-start">
@@ -153,12 +164,12 @@ export default function ProductDetails({ product }: { product: Product }) {
                         <div className="flex gap-4 mt-auto sticky bottom-0 bg-white md:static py-4 border-t md:border-t-0 z-20">
                             <div className="w-full">
                                 <button
-                                    onClick={() => addToCart(product)}
+                                    onClick={handleAddToCart}
                                     className="w-full bg-[#F4C430] hover:bg-[#E5B622] text-black font-bold py-4 rounded-lg uppercase tracking-widest transition-colors text-sm shadow-sm flex items-center justify-center gap-2"
                                 >
                                     <span>Add to Cart</span>
                                     <span>•</span>
-                                    <span>₹{product.price}</span>
+                                    <span>₹{currentPrice}</span>
                                 </button>
                             </div>
                         </div>
