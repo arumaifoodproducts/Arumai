@@ -38,11 +38,11 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
             </div>
 
             {/* Content */}
-            <div className="p-4 flex flex-col flex-grow">
+            <div className="p-3 md:p-4 flex flex-col flex-grow">
                 <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-1">
                     {product.category}
                 </p>
-                <h3 className="text-base font-serif font-bold text-primary-dark mb-2 line-clamp-2 min-h-[3rem] group-hover:text-secondary transition-colors">
+                <h3 className="text-sm md:text-base font-serif font-bold text-primary-dark mb-2 line-clamp-2 min-h-[2.5rem] md:min-h-[3rem] group-hover:text-secondary transition-colors">
                     <a href={`/product/${product.id}`}>
                         <span aria-hidden="true" className="absolute inset-0 z-0" />
                         {product.name}
@@ -71,7 +71,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
                 {/* Add to Cart Button (Full Width Bottom) */}
                 <button
                     onClick={() => addToCart(product)}
-                    className="mt-4 w-full bg-primary hover:bg-primary-dark text-white text-sm font-bold py-3 rounded uppercase tracking-wider transition-colors z-20 relative"
+                    className="mt-3 md:mt-4 w-full bg-primary hover:bg-primary-dark text-white text-xs md:text-sm font-bold py-2 md:py-3 rounded uppercase tracking-wider transition-colors z-20 relative"
                 >
                     Add to Cart
                 </button>

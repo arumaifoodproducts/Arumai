@@ -60,7 +60,7 @@ export default function Home() {
             <div className="inline-block bg-white/80 backdrop-blur px-4 py-2 rounded-full text-primary-dark font-bold text-sm uppercase tracking-widest border border-primary/10 shadow-sm">
               Winter Season Special
             </div>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary-dark leading-[1.1]">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-primary-dark leading-[1.1]">
               Natural <br />
               <span className="text-secondary">Millets.</span>
             </h1>
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       {/* Most Loved / Best Sellers */}
-      <section className="py-20 bg-cream-light">
+      <section className="py-12 md:py-20 bg-cream-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
@@ -124,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Spotlight / Testimonial Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-4 mb-16">
             <span className="text-4xl text-accent">★</span>

@@ -88,8 +88,22 @@ const Navbar = () => {
                         </button>
                     </div>
 
-                    {/* Mobile menu button */}
-                    <div className="md:hidden flex items-center">
+                    {/* Mobile Menu & Cart */}
+                    <div className="md:hidden flex items-center space-x-4">
+                        <button
+                            onClick={() => setIsCartOpen(true)}
+                            className="text-primary-dark hover:text-secondary relative transition-colors"
+                        >
+                            <span className="sr-only">Cart</span>
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                            {cartCount > 0 && (
+                                <span className="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                                    {cartCount}
+                                </span>
+                            )}
+                        </button>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-primary-dark hover:text-secondary focus:outline-none"
