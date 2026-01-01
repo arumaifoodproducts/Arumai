@@ -1,42 +1,10 @@
+import { products } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
-  const featuredProducts = [
-    {
-      id: 'm1',
-      name: 'Finger Millet Noodles (Ragi) - Nutritious & Tasty',
-      price: 95,
-      category: 'Millet Noodles',
-      image: 'https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=800',
-      isOrganic: true
-    },
-    {
-      id: 'm2',
-      name: 'Pearl Millet Pasta (Bajra) - Gluten Free',
-      price: 120,
-      category: 'Millet Pasta',
-      image: 'https://images.unsplash.com/photo-1621800043295-dabb67d9652a?auto=format&fit=crop&q=80&w=800', // Rotini pasta
-      isOrganic: true
-    },
-    {
-      id: 'm3',
-      name: 'Barnyard Millet Mix (Kuthiraivali) - Weight Loss Special',
-      price: 150,
-      category: 'Millet Rice',
-      image: 'https://images.unsplash.com/photo-1596560548464-f010549b84d7?auto=format&fit=crop&q=80&w=800', // Rice/Grains
-      isOrganic: true
-    },
-    {
-      id: 'm4',
-      name: 'Little Millet Flakes (Samai) - Perfect Breakfast',
-      price: 110,
-      category: 'Millet Flakes',
-      image: 'https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&q=80&w=800',
-      isOrganic: true
-    },
-  ];
+  const featuredProducts = products;
 
   const categories = [
     { name: 'Millet Noodles', icon: '🍜' },
