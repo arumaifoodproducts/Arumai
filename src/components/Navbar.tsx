@@ -34,13 +34,13 @@ const Navbar = () => {
                     <div className="flex-shrink-0 flex items-center justify-center flex-1">
                         <div className="flex items-center space-x-3 lg:space-x-4">
                             {/* Left Text: English */}
-                            <div className="hidden md:flex flex-col items-end text-right">
-                                <span className="font-serif text-2xl lg:text-3xl font-bold text-primary leading-[0.8]">Arumai</span>
+                            <div className="flex flex-col items-start md:items-end text-left md:text-right order-2 md:order-1 ml-2 md:ml-0">
+                                <span className="font-serif text-xl md:text-2xl lg:text-3xl font-bold text-primary leading-[0.8]">Arumai</span>
                                 <span className="text-[10px] lg:text-[12px] tracking-[0.25em] font-medium text-secondary uppercase whitespace-nowrap mt-1">Food Products</span>
                             </div>
 
-                            <Link href="/" className="transition-transform hover:scale-105 duration-300">
-                                <div className="relative h-16 w-16 lg:h-20 lg:w-20">
+                            <Link href="/" className="transition-transform hover:scale-105 duration-300 order-1 md:order-2">
+                                <div className="relative h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20">
                                     <Image
                                         src="/logo.png"
                                         alt="Arumai Foods"
@@ -52,7 +52,7 @@ const Navbar = () => {
                             </Link>
 
                             {/* Right Text: Tamil */}
-                            <div className="hidden md:flex flex-col items-start text-left">
+                            <div className="hidden md:flex flex-col items-start text-left md:order-3">
                                 <span className="font-serif text-2xl lg:text-3xl font-bold text-primary leading-[0.8]">அருமை</span>
                                 <span className="text-[10px] lg:text-[12px] tracking-widest font-medium text-secondary whitespace-nowrap mt-1">புட் புராடக்ட்ஸ்</span>
                             </div>
