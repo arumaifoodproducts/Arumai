@@ -51,7 +51,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-cream-light">
 
       {/* Hero Section - Vibrant & Full Width */}
-      <section className="relative h-[500px] md:h-[600px] flex items-center bg-[#E6F3F5] overflow-hidden">
+      <section className="relative py-12 md:py-0 min-h-[600px] h-auto md:h-[600px] flex items-center bg-[#E6F3F5] overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[#D8EBEF] skew-x-12 transform origin-top-right z-0"></div>
 
@@ -64,7 +64,7 @@ export default function Home() {
               Natural <br />
               <span className="text-secondary">Millets.</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-lg leading-relaxed">
+            <p className="text-base md:text-xl text-gray-600 max-w-lg leading-relaxed">
               Wholesome, Gluten-free, and Nutritious. Discover the ancient power of millets in every bite of our noodles and pasta.
             </p>
             <div className="pt-4 flex gap-4">
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 relative h-[400px] md:h-[550px] w-full">
+          <div className="order-1 md:order-2 relative h-[250px] md:h-[550px] w-full">
             <Image
               src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=1000"
               alt="Organic Millets Basket"
