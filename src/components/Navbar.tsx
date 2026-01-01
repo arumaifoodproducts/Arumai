@@ -22,6 +22,9 @@ const Navbar = () => {
 
                     {/* Desktop Menu Left */}
                     <div className="hidden md:flex space-x-8 items-center flex-1">
+                        <Link href="/" className="text-primary-dark hover:text-secondary font-medium uppercase tracking-wide text-sm transition-colors">
+                            Home
+                        </Link>
                         <Link href="/shop" className="text-primary-dark hover:text-secondary font-medium uppercase tracking-wide text-sm transition-colors">
                             Shop
                         </Link>
@@ -124,6 +127,9 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden bg-cream-light border-t border-cream-dark">
                     <div className="px-4 pt-2 pb-6 space-y-2">
+                        <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-primary-dark hover:bg-cream hover:text-secondary">
+                            Home
+                        </Link>
                         <Link href="/shop" className="block px-3 py-2 rounded-md text-base font-medium text-primary-dark hover:bg-cream hover:text-secondary">
                             Shop
                         </Link>
